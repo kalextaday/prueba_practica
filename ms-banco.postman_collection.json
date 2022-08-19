@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "3657b3b5-fc5d-4b09-94b5-e46fd9241b14",
+		"name": "ms-banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/clientes/v1/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 30,\r\n    \"direccion\": \"Amazonas y  NNUU\",\r\n    \"telefono\": \"097548965\",\r\n    \"contrasena\": \"5678\",\r\n    \"estadoCliente\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/clientes/v1/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"clientes",
+						"v1",
+						"crear"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/msbanco/clientes/v1/crear",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Marianela Montalvo\",\r\n    \"identificacion\": \"1571471339\",\r\n    \"genero\": \"F\",\r\n    \"edad\": 40,\r\n    \"direccion\": \"Amazonas y  NNUU\",\r\n    \"telefono\": \"097548965\",\r\n    \"contrasena\": \"5678\",\r\n    \"estadoCliente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/clientes/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"clientes",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"message\": \"Se ha creado el usuario correctamente\",\n    \"data\": {\n        \"nombre\": \"Marianela Montalvo\",\n        \"identificacion\": \"1571471339\",\n        \"genero\": \"F\",\n        \"edad\": 40,\n        \"direccion\": \"Amazonas y  NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": \"5678\",\n        \"estadoCliente\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/clientes/v1/actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Alexander Jhoel\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 30,\r\n    \"direccion\": \"Guayaquil\",\r\n    \"telefono\": \"0987452136\",\r\n    \"contrasena\": \"2151\",\r\n    \"estadoCliente\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/clientes/v1/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"clientes",
+						"v1",
+						"actualizar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/clientes/v1/actualizar",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Alexander Jhoel\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 30,\r\n    \"direccion\": \"Guayaquil\",\r\n    \"telefono\": \"0987452136\",\r\n    \"contrasena\": \"2151\",\r\n    \"estadoCliente\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/clientes/v1/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"clientes",
+								"v1",
+								"actualizar"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"message\": \"Usuario actualizado correctamente\",\r\n    \"data\": {\r\n        \"nombre\": \"Alexander Jhoel\",\r\n        \"identificacion\": \"1524125247\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 30,\r\n        \"direccion\": \"Guayaquil\",\r\n        \"telefono\": \"0987452136\",\r\n        \"contrasena\": \"2151\",\r\n        \"estadoCliente\": true\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "/clientes/v1/eliminar/987654321",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/msbanco/clientes/v1/eliminar/1524125247",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"clientes",
+						"v1",
+						"eliminar",
+						"1524125247"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/clientes/v1/eliminar/987654321",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/msbanco/clientes/v1/eliminar/1524125247",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"clientes",
+								"v1",
+								"eliminar",
+								"1524125247"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"message\": \"Usuario eliminado correctamente\",\r\n    \"data\": true\r\n}"
+				}
+			]
+		},
+		{
+			"name": "/cuentas/v1/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"tipoCuenta\": \"AHORRO\",\r\n    \"saldoInicial\": \"100.0\",\r\n    \"estadoCuenta\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/cuentas/v1/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"cuentas",
+						"v1",
+						"crear"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/msbanco/cuentas/v1/crear",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"tipoCuenta\": \"AHORRO\",\r\n    \"saldoInicial\": \"100.0\",\r\n    \"estadoCuenta\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/cuentas/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"cuentas",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"message\": \"Cuenta creada correctamente\",\n    \"data\": {\n        \"nombre\": \"Jose Lema\",\n        \"identificacion\": \"1524125247\",\n        \"numeroCuenta\": \"741236985\",\n        \"tipoCuenta\": \"AHORRO\",\n        \"saldoInicial\": 100.0,\n        \"estadoCuenta\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/cuentas/v1/actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"tipoCuenta\": \"CORRIENTE\",\r\n    \"saldoInicial\": \"100.0\",\r\n    \"estadoCuenta\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/cuentas/v1/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"cuentas",
+						"v1",
+						"actualizar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/cuentas/v1/actualizar",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jose Lema\",\r\n    \"identificacion\": \"1524125247\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"tipoCuenta\": \"CORRIENTE\",\r\n    \"saldoInicial\": \"100.0\",\r\n    \"estadoCuenta\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/cuentas/v1/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"cuentas",
+								"v1",
+								"actualizar"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Cuenta actualizada correctamente\",\n    \"data\": {\n        \"nombre\": \"Jose Lema\",\n        \"identificacion\": \"1524125247\",\n        \"numeroCuenta\": \"741236985\",\n        \"tipoCuenta\": \"CORRIENTE\",\n        \"saldoInicial\": 100,\n        \"estadoCuenta\": false\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/cuentas/v1/eliminar/74123698",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/msbanco/cuentas/v1/eliminar/741236985",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"cuentas",
+						"v1",
+						"eliminar",
+						"741236985"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/cuentas/v1/eliminar/74123698",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/msbanco/cuentas/v1/eliminar/741236985",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"cuentas",
+								"v1",
+								"eliminar",
+								"741236985"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Cuenta eliminada correctamente\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "/movimientos/v1/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"fecha\": \"18/08/2022\",\r\n    \"tipoMovimiento\": \"debito\",\r\n    \"valor\": \"1000.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/movimientos/v1/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"movimientos",
+						"v1",
+						"crear"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/movimientos/v1/crear",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"fecha\": \"26/07/2022\",\r\n    \"tipoMovimiento\": \"credito\",\r\n    \"valor\": \"40.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/movimientos/v1/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"movimientos",
+								"v1",
+								"crear"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 201,\r\n    \"message\": \"Movimiento creado correctamente\",\r\n    \"data\": {\r\n        \"idTransaction\": 1,\r\n        \"numeroCuenta\": \"741236985\",\r\n        \"tipoCuenta\": \"AHORRO\",\r\n        \"saldoInicial\": 100.000,\r\n        \"estadoCuenta\": true,\r\n        \"fecha\": \"26/07/2022\",\r\n        \"tipoMovimiento\": \"credito\",\r\n        \"valor\": 40.0,\r\n        \"saldo\": 140.000\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "/movimientos/v1/actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idTransaction\": \"1\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"fecha\": \"26/07/2022\",\r\n    \"tipoMovimiento\": \"DEBITO\",\r\n    \"valor\": \"40.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/msbanco/movimientos/v1/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"movimientos",
+						"v1",
+						"actualizar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/movimientos/v1/actualizar",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTransaction\": \"1\",\r\n    \"numeroCuenta\": \"741236985\",\r\n    \"fecha\": \"26/07/2022\",\r\n    \"tipoMovimiento\": \"DEBITO\",\r\n    \"valor\": \"40.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/msbanco/movimientos/v1/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"movimientos",
+								"v1",
+								"actualizar"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"message\": \"Movimiento actualizado correctamente\",\n    \"data\": {\n        \"idTransaction\": 1,\n        \"numeroCuenta\": \"741236985\",\n        \"tipoCuenta\": null,\n        \"saldoInicial\": null,\n        \"estadoCuenta\": null,\n        \"fecha\": \"26/07/2022\",\n        \"tipoMovimiento\": \"DEBITO\",\n        \"valor\": 40,\n        \"saldo\": 140\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/movimientos/v1/eliminar/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/msbanco/movimientos/v1/eliminar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"movimientos",
+						"v1",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/movimientos/v1/eliminar/1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/msbanco/movimientos/v1/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"movimientos",
+								"v1",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Movimiento eliminado correctamente\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "/movimientos/v1/reportes?dateInit=26-07-2022&dateEnd=27-07-2022",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/msbanco/movimientos/v1/reportes?dateInit=13-08-2022&dateEnd=18-08-2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"msbanco",
+						"movimientos",
+						"v1",
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "dateInit",
+							"value": "13-08-2022"
+						},
+						{
+							"key": "dateEnd",
+							"value": "18-08-2022"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/movimientos/v1/reportes?dateInit=26-07-2022&dateEnd=27-07-2022",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/msbanco/movimientos/v1/reportes?dateInit=23-07-2022&dateEnd=27-07-2022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"msbanco",
+								"movimientos",
+								"v1",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "dateInit",
+									"value": "23-07-2022"
+								},
+								{
+									"key": "dateEnd",
+									"value": "27-07-2022"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"message\": \"Consulta realizada con exito\",\r\n    \"data\": [\r\n        {\r\n            \"idMovimiento\": 2,\r\n            \"idCuenta\": 2,\r\n            \"fecha\": \"2022-07-26T05:00:00.000+00:00\",\r\n            \"tipoMovimiento\": \"credito\",\r\n            \"valor\": 40.000,\r\n            \"saldo\": 140.000\r\n        },\r\n        {\r\n            \"idMovimiento\": 3,\r\n            \"idCuenta\": 2,\r\n            \"fecha\": \"2022-07-26T05:00:00.000+00:00\",\r\n            \"tipoMovimiento\": \"credito\",\r\n            \"valor\": 60.000,\r\n            \"saldo\": 200.000\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,42 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /msbanco
+    session:
+      timeout: 21600s
+#springdoc:
+#  swagger-ui:
+#    path: /swagger-ui.html
+spring:
+  app:
+    version: 1.0.0
+  project:
+    name: MS_BANCO
+  application:
+    name: MS_BANCO
+  h2:
+    console:
+      path: /h2
+      enabled: true
+      settings:
+        web-allow-others: true
+  profiles:
+    active: default
+  flyway:
+    enabled: true
+    locations:
+      - classpath:db/migration/DDL
+  datasource:
+    driver-class-name: org.h2.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:~/banco
+    username: sa
+    password:
+    platform: h2
+    hikari:
+      poolName: poolH2
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 120000
+      connectionTimeout: 3000000
+      leakDetectionThreshold: 3000000
